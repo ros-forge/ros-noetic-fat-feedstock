@@ -613,7 +613,7 @@ outputs:
         - cmake
       host:
         - apr
-        - boost
+        - boost 1.72.*
         - bullet
         - bzip2
         - catkin_pkg
@@ -664,7 +664,7 @@ outputs:
         - yaml-cpp
       run:
         - apr
-        - boost
+        - boost 1.72.*
         - bullet
         - bzip2
         - catkin_pkg
