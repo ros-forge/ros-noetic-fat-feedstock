@@ -624,7 +624,7 @@ outputs:
         - eigen
         - empy
         - gmock
-        - graphviz
+        - graphviz 2.38.*
         - gtest
         - lcov
         - libcurl
@@ -675,7 +675,7 @@ outputs:
         - eigen
         - empy
         - gmock
-        - graphviz
+        - graphviz 2.38.*
         - gtest
         - lcov
         - libcurl
