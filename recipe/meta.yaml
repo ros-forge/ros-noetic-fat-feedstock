@@ -1,0 +1,724 @@
+package:
+  name: ros
+  version: 2020.04.27
+
+source:
+  - git_url: https://github.com/ros-gbp/ros_controllers-release.git
+    git_rev: release/noetic/ackermann_steering_controller/0.16.1-1
+    folder: src/ros-noetic-ackermann-steering-controller
+  - git_url: https://github.com/ros-gbp/actionlib-release.git
+    git_rev: release/noetic/actionlib/1.13.0-1
+    folder: src/ros-noetic-actionlib
+  - git_url: https://github.com/ros-gbp/common_msgs-release.git
+    git_rev: release/noetic/actionlib_msgs/1.12.7-1
+    folder: src/ros-noetic-actionlib-msgs
+  - git_url: https://github.com/ros-gbp/navigation-release.git
+    git_rev: release/noetic/amcl/1.17.0-1
+    folder: src/ros-noetic-amcl
+  - git_url: https://github.com/ros-gbp/geometry_angles_utils-release.git
+    git_rev: release/noetic/angles/1.9.13-1
+    folder: src/ros-noetic-angles
+  - git_url: https://github.com/ros-gbp/navigation-release.git
+    git_rev: release/noetic/base_local_planner/1.17.0-1
+    folder: src/ros-noetic-base-local-planner
+  - git_url: https://github.com/ros-gbp/bond_core-release.git
+    git_rev: release/noetic/bond/1.8.4-1
+    folder: src/ros-noetic-bond
+  - git_url: https://github.com/ros-gbp/bond_core-release.git
+    git_rev: release/noetic/bond_core/1.8.4-1
+    folder: src/ros-noetic-bond-core
+  - git_url: https://github.com/ros-gbp/bond_core-release.git
+    git_rev: release/noetic/bondcpp/1.8.4-1
+    folder: src/ros-noetic-bondcpp
+  - git_url: https://github.com/ros-gbp/bond_core-release.git
+    git_rev: release/noetic/bondpy/1.8.4-1
+    folder: src/ros-noetic-bondpy
+  - git_url: https://github.com/ros-gbp/image_common-release.git
+    git_rev: release/noetic/camera_calibration_parsers/1.12.0-1
+    folder: src/ros-noetic-camera-calibration-parsers
+  - git_url: https://github.com/ros-gbp/image_common-release.git
+    git_rev: release/noetic/camera_info_manager/1.12.0-1
+    folder: src/ros-noetic-camera-info-manager
+  - git_url: https://github.com/ros-gbp/navigation-release.git
+    git_rev: release/noetic/carrot_planner/1.17.0-1
+    folder: src/ros-noetic-carrot-planner
+  - git_url: https://github.com/ros-gbp/catkin-release.git
+    git_rev: release/noetic/catkin/0.8.1-1
+    folder: src/ros-noetic-catkin
+    patches:
+      - patch/ros-noetic-catkin.patch
+  - git_url: https://github.com/ros-gbp/class_loader-release.git
+    git_rev: release/noetic/class_loader/0.5.0-1
+    folder: src/ros-noetic-class-loader
+  - git_url: https://github.com/ros-gbp/navigation-release.git
+    git_rev: release/noetic/clear_costmap_recovery/1.17.0-1
+    folder: src/ros-noetic-clear-costmap-recovery
+  - git_url: https://github.com/ros-gbp/cmake_modules-release.git
+    git_rev: release/noetic/cmake_modules/0.5.0-1
+    folder: src/ros-noetic-cmake-modules
+  - git_url: https://github.com/mikeferguson/code_coverage-gbp.git
+    git_rev: release/noetic/code_coverage/0.4.1-1
+    folder: src/ros-noetic-code-coverage
+  - git_url: https://github.com/ros-gbp/ros_control-release.git
+    git_rev: release/noetic/combined_robot_hw/0.19.0-1
+    folder: src/ros-noetic-combined-robot-hw
+  - git_url: https://github.com/ros-gbp/common_msgs-release.git
+    git_rev: release/noetic/common_msgs/1.12.7-1
+    folder: src/ros-noetic-common-msgs
+  - git_url: https://github.com/ros-gbp/control_msgs-release.git
+    git_rev: release/noetic/control_msgs/1.5.2-1
+    folder: src/ros-noetic-control-msgs
+  - git_url: https://github.com/ros-gbp/control_toolbox-release.git
+    git_rev: release/noetic/control_toolbox/1.18.0-1
+    folder: src/ros-noetic-control-toolbox
+  - git_url: https://github.com/ros-gbp/ros_control-release.git
+    git_rev: release/noetic/controller_interface/0.19.0-1
+    folder: src/ros-noetic-controller-interface
+  - git_url: https://github.com/ros-gbp/ros_control-release.git
+    git_rev: release/noetic/controller_manager/0.19.0-1
+    folder: src/ros-noetic-controller-manager
+  - git_url: https://github.com/ros-gbp/ros_control-release.git
+    git_rev: release/noetic/controller_manager_msgs/0.19.0-1
+    folder: src/ros-noetic-controller-manager-msgs
+  - git_url: https://github.com/ros-gbp/navigation-release.git
+    git_rev: release/noetic/costmap_2d/1.17.0-1
+    folder: src/ros-noetic-costmap-2d
+  - git_url: https://github.com/ros-gbp/roscpp_core-release.git
+    git_rev: release/noetic/cpp_common/0.7.1-1
+    folder: src/ros-noetic-cpp-common
+  - git_url: https://github.com/ros-gbp/diagnostics-release.git
+    git_rev: release/noetic/diagnostic_aggregator/1.9.4-1
+    folder: src/ros-noetic-diagnostic-aggregator
+  - git_url: https://github.com/ros-gbp/diagnostics-release.git
+    git_rev: release/noetic/diagnostic_analysis/1.9.4-1
+    folder: src/ros-noetic-diagnostic-analysis
+  - git_url: https://github.com/ros-gbp/diagnostics-release.git
+    git_rev: release/noetic/diagnostic_common_diagnostics/1.9.4-1
+    folder: src/ros-noetic-diagnostic-common-diagnostics
+  - git_url: https://github.com/ros-gbp/common_msgs-release.git
+    git_rev: release/noetic/diagnostic_msgs/1.12.7-1
+    folder: src/ros-noetic-diagnostic-msgs
+  - git_url: https://github.com/ros-gbp/diagnostics-release.git
+    git_rev: release/noetic/diagnostic_updater/1.9.4-1
+    folder: src/ros-noetic-diagnostic-updater
+  - git_url: https://github.com/ros-gbp/diagnostics-release.git
+    git_rev: release/noetic/diagnostics/1.9.4-1
+    folder: src/ros-noetic-diagnostics
+  - git_url: https://github.com/ros-gbp/ros_controllers-release.git
+    git_rev: release/noetic/diff_drive_controller/0.16.1-1
+    folder: src/ros-noetic-diff-drive-controller
+  - git_url: https://github.com/ros-gbp/navigation-release.git
+    git_rev: release/noetic/dwa_local_planner/1.17.0-1
+    folder: src/ros-noetic-dwa-local-planner
+  - git_url: https://github.com/ros-gbp/dynamic_reconfigure-release.git
+    git_rev: release/noetic/dynamic_reconfigure/1.7.0-1
+    folder: src/ros-noetic-dynamic-reconfigure
+  - git_url: https://github.com/ros-gbp/ros_controllers-release.git
+    git_rev: release/noetic/effort_controllers/0.16.1-1
+    folder: src/ros-noetic-effort-controllers
+  - git_url: https://github.com/ros-gbp/geometry-release.git
+    git_rev: release/noetic/eigen_conversions/1.13.0-1
+    folder: src/ros-noetic-eigen-conversions
+    patches:
+      - patch/ros-noetic-eigen-conversions.patch
+  - git_url: https://github.com/ros-gbp/navigation-release.git
+    git_rev: release/noetic/fake_localization/1.17.0-1
+    folder: src/ros-noetic-fake-localization
+  - git_url: https://github.com/ros-gbp/ros_controllers-release.git
+    git_rev: release/noetic/force_torque_sensor_controller/0.16.1-1
+    folder: src/ros-noetic-force-torque-sensor-controller
+  - git_url: https://github.com/ros-gbp/ros_controllers-release.git
+    git_rev: release/noetic/forward_command_controller/0.16.1-1
+    folder: src/ros-noetic-forward-command-controller
+  - git_url: https://github.com/ros-gbp/gencpp-release.git
+    git_rev: release/noetic/gencpp/0.6.5-1
+    folder: src/ros-noetic-gencpp
+  - git_url: https://github.com/tork-a/geneus-release.git
+    git_rev: release/noetic/geneus/3.0.0-1
+    folder: src/ros-noetic-geneus
+  - git_url: https://github.com/ros-gbp/genlisp-release.git
+    git_rev: release/noetic/genlisp/0.4.18-1
+    folder: src/ros-noetic-genlisp
+  - git_url: https://github.com/ros-gbp/genmsg-release.git
+    git_rev: release/noetic/genmsg/0.5.15-1
+    folder: src/ros-noetic-genmsg
+  - git_url: https://github.com/sloretz/gennodejs-release.git
+    git_rev: release/noetic/gennodejs/2.0.2-1
+    folder: src/ros-noetic-gennodejs
+  - git_url: https://github.com/ros-gbp/genpy-release.git
+    git_rev: release/noetic/genpy/0.6.10-1
+    folder: src/ros-noetic-genpy
+  - git_url: https://github.com/ros-gbp/geometry-release.git
+    git_rev: release/noetic/geometry/1.13.0-1
+    folder: src/ros-noetic-geometry
+  - git_url: https://github.com/ros-gbp/geometry2-release.git
+    git_rev: release/noetic/geometry2/0.7.0-1
+    folder: src/ros-noetic-geometry2
+  - git_url: https://github.com/ros-gbp/common_msgs-release.git
+    git_rev: release/noetic/geometry_msgs/1.12.7-1
+    folder: src/ros-noetic-geometry-msgs
+  - git_url: https://github.com/ros-gbp/navigation-release.git
+    git_rev: release/noetic/global_planner/1.17.0-1
+    folder: src/ros-noetic-global-planner
+  - git_url: https://github.com/ros-gbp/ros_controllers-release.git
+    git_rev: release/noetic/gripper_action_controller/0.16.1-1
+    folder: src/ros-noetic-gripper-action-controller
+  - git_url: https://github.com/ros-gbp/ros_control-release.git
+    git_rev: release/noetic/hardware_interface/0.19.0-1
+    folder: src/ros-noetic-hardware-interface
+  - git_url: https://github.com/ros-gbp/image_common-release.git
+    git_rev: release/noetic/image_common/1.12.0-1
+    folder: src/ros-noetic-image-common
+  - git_url: https://github.com/ros-gbp/image_common-release.git
+    git_rev: release/noetic/image_transport/1.12.0-1
+    folder: src/ros-noetic-image-transport
+  - git_url: https://github.com/ros-gbp/ros_controllers-release.git
+    git_rev: release/noetic/imu_sensor_controller/0.16.1-1
+    folder: src/ros-noetic-imu-sensor-controller
+  - git_url: https://github.com/ros-gbp/interactive_markers-release.git
+    git_rev: release/noetic/interactive_markers/1.12.0-1
+    folder: src/ros-noetic-interactive-markers
+  - git_url: https://github.com/ros-gbp/ros_control-release.git
+    git_rev: release/noetic/joint_limits_interface/0.19.0-1
+    folder: src/ros-noetic-joint-limits-interface
+  - git_url: https://github.com/ros-gbp/ros_controllers-release.git
+    git_rev: release/noetic/joint_state_controller/0.16.1-1
+    folder: src/ros-noetic-joint-state-controller
+  - git_url: https://github.com/ros-gbp/ros_controllers-release.git
+    git_rev: release/noetic/joint_trajectory_controller/0.16.1-1
+    folder: src/ros-noetic-joint-trajectory-controller
+  - git_url: https://github.com/ros-gbp/geometry-release.git
+    git_rev: release/noetic/kdl_conversions/1.13.0-1
+    folder: src/ros-noetic-kdl-conversions
+    patches:
+      - patch/ros-noetic-kdl-conversions.patch
+  - git_url: https://github.com/ros-gbp/kdl_parser-release.git
+    git_rev: release/noetic/kdl_parser/1.14.0-1
+    folder: src/ros-noetic-kdl-parser
+  - git_url: https://github.com/ros-gbp/laser_geometry-release.git
+    git_rev: release/noetic/laser_geometry/1.6.5-1
+    folder: src/ros-noetic-laser-geometry
+  - git_url: https://github.com/ros-gbp/navigation_msgs-release.git
+    git_rev: release/noetic/map_msgs/1.14.0-1
+    folder: src/ros-noetic-map-msgs
+  - git_url: https://github.com/ros-gbp/navigation-release.git
+    git_rev: release/noetic/map_server/1.17.0-1
+    folder: src/ros-noetic-map-server
+    patches:
+      - patch/ros-noetic-map-server.patch
+  - git_url: https://github.com/ros-gbp/media_export-release.git
+    git_rev: release/noetic/media_export/0.3.0-1
+    folder: src/ros-noetic-media-export
+  - git_url: https://github.com/ros-gbp/ros_comm-release.git
+    git_rev: release/noetic/message_filters/1.15.4-1
+    folder: src/ros-noetic-message-filters
+  - git_url: https://github.com/ros-gbp/message_generation-release.git
+    git_rev: release/noetic/message_generation/0.4.1-1
+    folder: src/ros-noetic-message-generation
+  - git_url: https://github.com/ros-gbp/message_runtime-release.git
+    git_rev: release/noetic/message_runtime/0.4.13-1
+    folder: src/ros-noetic-message-runtime
+  - git_url: https://github.com/ros-gbp/ros-release.git
+    git_rev: release/noetic/mk/1.15.1-1
+    folder: src/ros-noetic-mk
+  - git_url: https://github.com/ros-gbp/navigation-release.git
+    git_rev: release/noetic/move_base/1.17.0-1
+    folder: src/ros-noetic-move-base
+  - git_url: https://github.com/ros-gbp/navigation_msgs-release.git
+    git_rev: release/noetic/move_base_msgs/1.14.0-1
+    folder: src/ros-noetic-move-base-msgs
+  - git_url: https://github.com/ros-gbp/navigation-release.git
+    git_rev: release/noetic/move_slow_and_clear/1.17.0-1
+    folder: src/ros-noetic-move-slow-and-clear
+  - git_url: https://github.com/ros-gbp/navigation-release.git
+    git_rev: release/noetic/nav_core/1.17.0-1
+    folder: src/ros-noetic-nav-core
+  - git_url: https://github.com/ros-gbp/common_msgs-release.git
+    git_rev: release/noetic/nav_msgs/1.12.7-1
+    folder: src/ros-noetic-nav-msgs
+  - git_url: https://github.com/ros-gbp/navigation-release.git
+    git_rev: release/noetic/navfn/1.17.0-1
+    folder: src/ros-noetic-navfn
+  - git_url: https://github.com/ros-gbp/navigation-release.git
+    git_rev: release/noetic/navigation/1.17.0-1
+    folder: src/ros-noetic-navigation
+  - git_url: https://github.com/ros-gbp/nodelet_core-release.git
+    git_rev: release/noetic/nodelet/1.10.0-1
+    folder: src/ros-noetic-nodelet
+  - git_url: https://github.com/ros-gbp/nodelet_core-release.git
+    git_rev: release/noetic/nodelet_core/1.10.0-1
+    folder: src/ros-noetic-nodelet-core
+  - git_url: https://github.com/ros-gbp/nodelet_core-release.git
+    git_rev: release/noetic/nodelet_topic_tools/1.10.0-1
+    folder: src/ros-noetic-nodelet-topic-tools
+  - git_url: https://github.com/ros-gbp/perception_pcl-release.git
+    git_rev: release/noetic/pcl_conversions/1.7.1-1
+    folder: src/ros-noetic-pcl-conversions
+  - git_url: https://github.com/ros-gbp/pcl_msgs-release.git
+    git_rev: release/noetic/pcl_msgs/0.3.0-1
+    folder: src/ros-noetic-pcl-msgs
+  - git_url: https://github.com/ros-gbp/perception_pcl-release.git
+    git_rev: release/noetic/pcl_ros/1.7.1-1
+    folder: src/ros-noetic-pcl-ros
+  - git_url: https://github.com/ros-gbp/perception_pcl-release.git
+    git_rev: release/noetic/perception_pcl/1.7.1-1
+    folder: src/ros-noetic-perception-pcl
+  - git_url: https://github.com/ros-gbp/pluginlib-release.git
+    git_rev: release/noetic/pluginlib/1.12.2-1
+    folder: src/ros-noetic-pluginlib
+    patches:
+      - patch/ros-noetic-pluginlib.patch
+  - git_url: https://github.com/ros-gbp/image_common-release.git
+    git_rev: release/noetic/polled_camera/1.12.0-1
+    folder: src/ros-noetic-polled-camera
+  - git_url: https://github.com/ros-gbp/ros_controllers-release.git
+    git_rev: release/noetic/position_controllers/0.16.1-1
+    folder: src/ros-noetic-position-controllers
+  - git_url: https://github.com/ros-gbp/python_qt_binding-release.git
+    git_rev: release/noetic/python_qt_binding/0.4.1-1
+    folder: src/ros-noetic-python-qt-binding
+    patches:
+      - patch/ros-noetic-python-qt-binding.patch
+  - git_url: https://github.com/ros-gbp/qt_gui_core-release.git
+    git_rev: release/noetic/qt_dotgraph/0.4.0-1
+    folder: src/ros-noetic-qt-dotgraph
+  - git_url: https://github.com/ros-gbp/qt_gui_core-release.git
+    git_rev: release/noetic/qt_gui/0.4.0-1
+    folder: src/ros-noetic-qt-gui
+  - git_url: https://github.com/ros-gbp/qt_gui_core-release.git
+    git_rev: release/noetic/qt_gui_cpp/0.4.0-1
+    folder: src/ros-noetic-qt-gui-cpp
+  - git_url: https://github.com/ros-gbp/qt_gui_core-release.git
+    git_rev: release/noetic/qt_gui_py_common/0.4.0-1
+    folder: src/ros-noetic-qt-gui-py-common
+  - git_url: https://github.com/ros-gbp/qwt_dependency-release.git
+    git_rev: release/noetic/qwt_dependency/1.1.1-1
+    folder: src/ros-noetic-qwt-dependency
+  - git_url: https://github.com/ros-gbp/realtime_tools-release.git
+    git_rev: release/noetic/realtime_tools/1.16.0-1
+    folder: src/ros-noetic-realtime-tools
+  - git_url: https://github.com/ros-gbp/resource_retriever-release.git
+    git_rev: release/noetic/resource_retriever/1.12.6-1
+    folder: src/ros-noetic-resource-retriever
+  - git_url: https://github.com/ros-gbp/robot_state_publisher-release.git
+    git_rev: release/noetic/robot_state_publisher/1.15.0-1
+    folder: src/ros-noetic-robot-state-publisher
+  - git_url: https://github.com/ros-gbp/ros-release.git
+    git_rev: release/noetic/ros/1.15.1-1
+    folder: src/ros-noetic-ros
+  - git_url: https://github.com/ros-gbp/ros_comm-release.git
+    git_rev: release/noetic/ros_comm/1.15.4-1
+    folder: src/ros-noetic-ros-comm
+  - git_url: https://github.com/ros-gbp/ros_control-release.git
+    git_rev: release/noetic/ros_control/0.19.0-1
+    folder: src/ros-noetic-ros-control
+  - git_url: https://github.com/ros-gbp/ros_controllers-release.git
+    git_rev: release/noetic/ros_controllers/0.16.1-1
+    folder: src/ros-noetic-ros-controllers
+  - git_url: https://github.com/ros-gbp/ros_environment-release.git
+    git_rev: release/noetic/ros_environment/1.3.1-1
+    folder: src/ros-noetic-ros-environment
+  - git_url: https://github.com/ros-gbp/ros_comm-release.git
+    git_rev: release/noetic/rosbag/1.15.4-1
+    folder: src/ros-noetic-rosbag
+  - git_url: https://github.com/ros-gbp/rosbag_migration_rule-release.git
+    git_rev: release/noetic/rosbag_migration_rule/1.0.1-1
+    folder: src/ros-noetic-rosbag-migration-rule
+  - git_url: https://github.com/ros-gbp/ros_comm-release.git
+    git_rev: release/noetic/rosbag_storage/1.15.4-1
+    folder: src/ros-noetic-rosbag-storage
+  - git_url: https://github.com/ros-gbp/ros-release.git
+    git_rev: release/noetic/rosbash/1.15.1-1
+    folder: src/ros-noetic-rosbash
+  - git_url: https://github.com/ros-gbp/ros-release.git
+    git_rev: release/noetic/rosboost_cfg/1.15.1-1
+    folder: src/ros-noetic-rosboost-cfg
+  - git_url: https://github.com/ros-gbp/ros-release.git
+    git_rev: release/noetic/rosbuild/1.15.1-1
+    folder: src/ros-noetic-rosbuild
+  - git_url: https://github.com/ros-gbp/ros-release.git
+    git_rev: release/noetic/rosclean/1.15.1-1
+    folder: src/ros-noetic-rosclean
+  - git_url: https://github.com/ros-gbp/rosconsole-release.git
+    git_rev: release/noetic/rosconsole/1.13.15-1
+    folder: src/ros-noetic-rosconsole
+  - git_url: https://github.com/ros-gbp/rosconsole_bridge-release.git
+    git_rev: release/noetic/rosconsole_bridge/0.5.4-1
+    folder: src/ros-noetic-rosconsole-bridge
+  - git_url: https://github.com/ros-gbp/ros_comm-release.git
+    git_rev: release/noetic/roscpp/1.15.4-1
+    folder: src/ros-noetic-roscpp
+  - git_url: https://github.com/ros-gbp/roscpp_core-release.git
+    git_rev: release/noetic/roscpp_serialization/0.7.1-1
+    folder: src/ros-noetic-roscpp-serialization
+  - git_url: https://github.com/ros-gbp/roscpp_core-release.git
+    git_rev: release/noetic/roscpp_traits/0.7.1-1
+    folder: src/ros-noetic-roscpp-traits
+  - git_url: https://github.com/ros-gbp/ros-release.git
+    git_rev: release/noetic/roscreate/1.15.1-1
+    folder: src/ros-noetic-roscreate
+  - git_url: https://github.com/ros-gbp/ros_comm-release.git
+    git_rev: release/noetic/rosgraph/1.15.4-1
+    folder: src/ros-noetic-rosgraph
+  - git_url: https://github.com/ros-gbp/ros_comm_msgs-release.git
+    git_rev: release/noetic/rosgraph_msgs/1.11.3-1
+    folder: src/ros-noetic-rosgraph-msgs
+  - git_url: https://github.com/ros-gbp/ros-release.git
+    git_rev: release/noetic/roslang/1.15.1-1
+    folder: src/ros-noetic-roslang
+  - git_url: https://github.com/ros-gbp/ros_comm-release.git
+    git_rev: release/noetic/roslaunch/1.15.4-1
+    folder: src/ros-noetic-roslaunch
+  - git_url: https://github.com/ros-gbp/ros-release.git
+    git_rev: release/noetic/roslib/1.15.1-1
+    folder: src/ros-noetic-roslib
+  - git_url: https://github.com/ros-gbp/roslint-release.git
+    git_rev: release/noetic/roslint/0.12.0-1
+    folder: src/ros-noetic-roslint
+  - git_url: https://github.com/ros-gbp/roslisp-release.git
+    git_rev: release/noetic/roslisp/1.9.24-1
+    folder: src/ros-noetic-roslisp
+  - git_url: https://github.com/ros-gbp/ros_comm-release.git
+    git_rev: release/noetic/roslz4/1.15.4-1
+    folder: src/ros-noetic-roslz4
+  - git_url: https://github.com/ros-gbp/ros-release.git
+    git_rev: release/noetic/rosmake/1.15.1-1
+    folder: src/ros-noetic-rosmake
+  - git_url: https://github.com/ros-gbp/ros_comm-release.git
+    git_rev: release/noetic/rosmaster/1.15.4-1
+    folder: src/ros-noetic-rosmaster
+  - git_url: https://github.com/ros-gbp/ros_comm-release.git
+    git_rev: release/noetic/rosmsg/1.15.4-1
+    folder: src/ros-noetic-rosmsg
+  - git_url: https://github.com/ros-gbp/ros_comm-release.git
+    git_rev: release/noetic/rosnode/1.15.4-1
+    folder: src/ros-noetic-rosnode
+  - git_url: https://github.com/ros-gbp/ros_comm-release.git
+    git_rev: release/noetic/rosout/1.15.4-1
+    folder: src/ros-noetic-rosout
+  - git_url: https://github.com/ros-gbp/rospack-release.git
+    git_rev: release/noetic/rospack/2.6.0-1
+    folder: src/ros-noetic-rospack
+  - git_url: https://github.com/ros-gbp/ros_comm-release.git
+    git_rev: release/noetic/rosparam/1.15.4-1
+    folder: src/ros-noetic-rosparam
+  - git_url: https://github.com/ros-gbp/ros_comm-release.git
+    git_rev: release/noetic/rospy/1.15.4-1
+    folder: src/ros-noetic-rospy
+  - git_url: https://github.com/ros-gbp/ros_comm-release.git
+    git_rev: release/noetic/rosservice/1.15.4-1
+    folder: src/ros-noetic-rosservice
+  - git_url: https://github.com/ros-gbp/ros_comm-release.git
+    git_rev: release/noetic/rostest/1.15.4-1
+    folder: src/ros-noetic-rostest
+  - git_url: https://github.com/ros-gbp/roscpp_core-release.git
+    git_rev: release/noetic/rostime/0.7.1-1
+    folder: src/ros-noetic-rostime
+  - git_url: https://github.com/ros-gbp/ros_comm-release.git
+    git_rev: release/noetic/rostopic/1.15.4-1
+    folder: src/ros-noetic-rostopic
+  - git_url: https://github.com/ros-gbp/ros-release.git
+    git_rev: release/noetic/rosunit/1.15.1-1
+    folder: src/ros-noetic-rosunit
+  - git_url: https://github.com/ros-gbp/ros_comm-release.git
+    git_rev: release/noetic/roswtf/1.15.4-1
+    folder: src/ros-noetic-roswtf
+  - git_url: https://github.com/ros-gbp/navigation-release.git
+    git_rev: release/noetic/rotate_recovery/1.17.0-1
+    folder: src/ros-noetic-rotate-recovery
+  - git_url: https://github.com/ros-gbp/rqt-release.git
+    git_rev: release/noetic/rqt/0.5.1-1
+    folder: src/ros-noetic-rqt
+  - git_url: https://github.com/ros-gbp/rqt_action-release.git
+    git_rev: release/noetic/rqt_action/0.4.9-1
+    folder: src/ros-noetic-rqt-action
+  - git_url: https://github.com/ros-gbp/rqt_bag-release.git
+    git_rev: release/noetic/rqt_bag/0.4.13-1
+    folder: src/ros-noetic-rqt-bag
+  - git_url: https://github.com/ros-gbp/rqt_bag-release.git
+    git_rev: release/noetic/rqt_bag_plugins/0.4.13-1
+    folder: src/ros-noetic-rqt-bag-plugins
+  - git_url: https://github.com/ros-gbp/rqt_console-release.git
+    git_rev: release/noetic/rqt_console/0.4.9-1
+    folder: src/ros-noetic-rqt-console
+  - git_url: https://github.com/ros-gbp/rqt_dep-release.git
+    git_rev: release/noetic/rqt_dep/0.4.10-1
+    folder: src/ros-noetic-rqt-dep
+  - git_url: https://github.com/ros-gbp/rqt_graph-release.git
+    git_rev: release/noetic/rqt_graph/0.4.12-1
+    folder: src/ros-noetic-rqt-graph
+  - git_url: https://github.com/ros-gbp/rqt-release.git
+    git_rev: release/noetic/rqt_gui/0.5.1-1
+    folder: src/ros-noetic-rqt-gui
+  - git_url: https://github.com/ros-gbp/rqt-release.git
+    git_rev: release/noetic/rqt_gui_cpp/0.5.1-1
+    folder: src/ros-noetic-rqt-gui-cpp
+  - git_url: https://github.com/ros-gbp/rqt-release.git
+    git_rev: release/noetic/rqt_gui_py/0.5.1-1
+    folder: src/ros-noetic-rqt-gui-py
+  - git_url: https://github.com/ros-gbp/rqt_launch-release.git
+    git_rev: release/noetic/rqt_launch/0.4.8-1
+    folder: src/ros-noetic-rqt-launch
+  - git_url: https://github.com/ros-gbp/rqt_logger_level-release.git
+    git_rev: release/noetic/rqt_logger_level/0.4.9-1
+    folder: src/ros-noetic-rqt-logger-level
+  - git_url: https://github.com/ros-gbp/rqt_msg-release.git
+    git_rev: release/noetic/rqt_msg/0.4.9-1
+    folder: src/ros-noetic-rqt-msg
+  - git_url: https://github.com/ros-gbp/rqt_plot-release.git
+    git_rev: release/noetic/rqt_plot/0.4.10-1
+    folder: src/ros-noetic-rqt-plot
+  - git_url: https://github.com/ros-gbp/rqt_publisher-release.git
+    git_rev: release/noetic/rqt_publisher/0.4.9-1
+    folder: src/ros-noetic-rqt-publisher
+  - git_url: https://github.com/ros-gbp/rqt-release.git
+    git_rev: release/noetic/rqt_py_common/0.5.1-1
+    folder: src/ros-noetic-rqt-py-common
+  - git_url: https://github.com/ros-gbp/rqt_py_console-release.git
+    git_rev: release/noetic/rqt_py_console/0.4.9-1
+    folder: src/ros-noetic-rqt-py-console
+  - git_url: https://github.com/ros-gbp/rqt_service_caller-release.git
+    git_rev: release/noetic/rqt_service_caller/0.4.9-1
+    folder: src/ros-noetic-rqt-service-caller
+  - git_url: https://github.com/ros-gbp/rqt_shell-release.git
+    git_rev: release/noetic/rqt_shell/0.4.10-1
+    folder: src/ros-noetic-rqt-shell
+  - git_url: https://github.com/ros-gbp/rqt_srv-release.git
+    git_rev: release/noetic/rqt_srv/0.4.8-1
+    folder: src/ros-noetic-rqt-srv
+  - git_url: https://github.com/ros-gbp/rqt_top-release.git
+    git_rev: release/noetic/rqt_top/0.4.9-1
+    folder: src/ros-noetic-rqt-top
+  - git_url: https://github.com/ros-gbp/rqt_topic-release.git
+    git_rev: release/noetic/rqt_topic/0.4.12-1
+    folder: src/ros-noetic-rqt-topic
+  - git_url: https://github.com/ros-gbp/rqt_web-release.git
+    git_rev: release/noetic/rqt_web/0.4.9-1
+    folder: src/ros-noetic-rqt-web
+  - git_url: https://github.com/ros-gbp/diagnostics-release.git
+    git_rev: release/noetic/self_test/1.9.4-1
+    folder: src/ros-noetic-self-test
+  - git_url: https://github.com/ros-gbp/common_msgs-release.git
+    git_rev: release/noetic/sensor_msgs/1.12.7-1
+    folder: src/ros-noetic-sensor-msgs
+  - git_url: https://github.com/ros-gbp/common_msgs-release.git
+    git_rev: release/noetic/shape_msgs/1.12.7-1
+    folder: src/ros-noetic-shape-msgs
+  - git_url: https://github.com/ros-gbp/bond_core-release.git
+    git_rev: release/noetic/smclib/1.8.4-1
+    folder: src/ros-noetic-smclib
+  - git_url: https://github.com/ros-gbp/std_msgs-release.git
+    git_rev: release/noetic/std_msgs/0.5.13-1
+    folder: src/ros-noetic-std-msgs
+  - git_url: https://github.com/ros-gbp/ros_comm_msgs-release.git
+    git_rev: release/noetic/std_srvs/1.11.3-1
+    folder: src/ros-noetic-std-srvs
+  - git_url: https://github.com/ros-gbp/common_msgs-release.git
+    git_rev: release/noetic/stereo_msgs/1.12.7-1
+    folder: src/ros-noetic-stereo-msgs
+  - git_url: https://github.com/ros-gbp/geometry-release.git
+    git_rev: release/noetic/tf/1.13.0-1
+    folder: src/ros-noetic-tf
+    patches:
+      - patch/ros-noetic-tf.patch
+  - git_url: https://github.com/ros-gbp/geometry2-release.git
+    git_rev: release/noetic/tf2/0.7.0-1
+    folder: src/ros-noetic-tf2
+    patches:
+      - patch/ros-noetic-tf2.patch
+  - git_url: https://github.com/ros-gbp/geometry2-release.git
+    git_rev: release/noetic/tf2_bullet/0.7.0-1
+    folder: src/ros-noetic-tf2-bullet
+  - git_url: https://github.com/ros-gbp/geometry2-release.git
+    git_rev: release/noetic/tf2_eigen/0.7.0-1
+    folder: src/ros-noetic-tf2-eigen
+  - git_url: https://github.com/ros-gbp/geometry2-release.git
+    git_rev: release/noetic/tf2_geometry_msgs/0.7.0-1
+    folder: src/ros-noetic-tf2-geometry-msgs
+  - git_url: https://github.com/ros-gbp/geometry2-release.git
+    git_rev: release/noetic/tf2_kdl/0.7.0-1
+    folder: src/ros-noetic-tf2-kdl
+  - git_url: https://github.com/ros-gbp/geometry2-release.git
+    git_rev: release/noetic/tf2_msgs/0.7.0-1
+    folder: src/ros-noetic-tf2-msgs
+  - git_url: https://github.com/ros-gbp/geometry2-release.git
+    git_rev: release/noetic/tf2_py/0.7.0-1
+    folder: src/ros-noetic-tf2-py
+    patches:
+      - patch/ros-noetic-tf2-py.patch
+  - git_url: https://github.com/ros-gbp/geometry2-release.git
+    git_rev: release/noetic/tf2_ros/0.7.0-1
+    folder: src/ros-noetic-tf2-ros
+    patches:
+      - patch/ros-noetic-tf2-ros.patch
+  - git_url: https://github.com/ros-gbp/geometry2-release.git
+    git_rev: release/noetic/tf2_sensor_msgs/0.7.0-1
+    folder: src/ros-noetic-tf2-sensor-msgs
+  - git_url: https://github.com/ros-gbp/geometry2-release.git
+    git_rev: release/noetic/tf2_tools/0.7.0-1
+    folder: src/ros-noetic-tf2-tools
+  - git_url: https://github.com/ros-gbp/geometry-release.git
+    git_rev: release/noetic/tf_conversions/1.13.0-1
+    folder: src/ros-noetic-tf-conversions
+    patches:
+      - patch/ros-noetic-tf-conversions.patch
+  - git_url: https://github.com/ros-gbp/ros_comm-release.git
+    git_rev: release/noetic/topic_tools/1.15.4-1
+    folder: src/ros-noetic-topic-tools
+  - git_url: https://github.com/ros-gbp/common_msgs-release.git
+    git_rev: release/noetic/trajectory_msgs/1.12.7-1
+    folder: src/ros-noetic-trajectory-msgs
+  - git_url: https://github.com/ros-gbp/ros_control-release.git
+    git_rev: release/noetic/transmission_interface/0.19.0-1
+    folder: src/ros-noetic-transmission-interface
+  - git_url: https://github.com/ros-gbp/urdf-release.git
+    git_rev: release/noetic/urdf/1.13.2-1
+    folder: src/ros-noetic-urdf
+  - git_url: https://github.com/ros-gbp/urdf-release.git
+    git_rev: release/noetic/urdf_parser_plugin/1.13.2-1
+    folder: src/ros-noetic-urdf-parser-plugin
+  - git_url: https://github.com/ros-gbp/urdfdom_py-release.git
+    git_rev: release/noetic/urdfdom_py/0.4.3-1
+    folder: src/ros-noetic-urdfdom-py
+  - git_url: https://github.com/ros-gbp/ros_controllers-release.git
+    git_rev: release/noetic/velocity_controllers/0.16.1-1
+    folder: src/ros-noetic-velocity-controllers
+  - git_url: https://github.com/ros-gbp/common_msgs-release.git
+    git_rev: release/noetic/visualization_msgs/1.12.7-1
+    folder: src/ros-noetic-visualization-msgs
+  - git_url: https://github.com/ros-gbp/navigation-release.git
+    git_rev: release/noetic/voxel_grid/1.17.0-1
+    folder: src/ros-noetic-voxel-grid
+  - git_url: https://github.com/ros-gbp/webkit_dependency-release.git
+    git_rev: release/noetic/webkit_dependency/1.1.2-1
+    folder: src/ros-noetic-webkit-dependency
+  - git_url: https://github.com/ros-gbp/xacro-release.git
+    git_rev: release/noetic/xacro/1.14.1-1
+    folder: src/ros-noetic-xacro
+  - git_url: https://github.com/ros-gbp/ros_comm-release.git
+    git_rev: release/noetic/xmlrpcpp/1.15.4-1
+    folder: src/ros-noetic-xmlrpcpp
+
+build:
+  number: 0
+  skip: true  # [not win64]
+
+outputs:
+  - name: ros-noetic-fat-all
+    requirements:
+      build:
+        - "{{ compiler('cxx') }}"
+        - "{{ compiler('c') }}"
+        - ninja
+        - cmake
+      host:
+        - apr
+        - boost
+        - bullet
+        - bzip2
+        - catkin_pkg
+        - cmake
+        - console_bridge
+        - coverage
+        - defusedxml
+        - eigen
+        - empy
+        - gmock
+        - graphviz
+        - gtest
+        - lcov
+        - libcurl
+        - log4cxx
+        - lz4
+        - matplotlib
+        - mock
+        - netifaces
+        - nose
+        - numpy
+        - openssl
+        - orocos-kdl
+        - paramiko
+        - pcl
+        - pillow
+        - pkg-config
+        - poco
+        - psutil
+        - pycairo
+        - pycryptodome
+        - pydot
+        - pyqt
+        - python {{ python }}
+        - python-gnupg
+        - python-orocos-kdl
+        - pyyaml
+        - qt
+        - rosdep
+        - rospkg
+        - sdl
+        - sdl_image
+        - setuptools
+        - tinyxml
+        - tinyxml2
+        - urdfdom
+        - urdfdom_headers
+        - yaml-cpp
+      run:
+        - apr
+        - boost
+        - bullet
+        - bzip2
+        - catkin_pkg
+        - cmake
+        - console_bridge
+        - coverage
+        - defusedxml
+        - eigen
+        - empy
+        - gmock
+        - graphviz
+        - gtest
+        - lcov
+        - libcurl
+        - log4cxx
+        - lz4
+        - matplotlib
+        - netifaces
+        - nose
+        - numpy
+        - openssl
+        - orocos-kdl
+        - paramiko
+        - pcl
+        - pillow
+        - pkg-config
+        - poco
+        - psutil
+        - pycairo
+        - pycryptodome
+        - pydot
+        - pyqt
+        - python {{ python }}
+        - python-gnupg
+        - python-orocos-kdl
+        - pyyaml
+        - rosdep
+        - rospkg
+        - sdl
+        - sdl_image
+        - setuptools
+        - tinyxml
+        - tinyxml2
+        - urdfdom
+        - urdfdom_headers
+        - yaml-cpp
+    script: bld_catkin_merge.bat
+
+about:
+  home: https://www.ros.org/
+  license: BSD-3-Clause
+  summary: |
+    Robot Operating System
+
+extra:
+  recipe-maintainers:
+    - ros-forge

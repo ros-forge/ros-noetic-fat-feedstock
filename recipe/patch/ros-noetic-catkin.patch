@@ -1,0 +1,49 @@
+diff --git a/cmake/templates/python_distutils_install.bat.in b/cmake/templates/python_distutils_install.bat.in
+index 315db1b9..f0282a79 100644
+--- a/cmake/templates/python_distutils_install.bat.in
++++ b/cmake/templates/python_distutils_install.bat.in
+@@ -7,13 +7,19 @@ if DEFINED DESTDIR (
+ 
+ cd "@INSTALL_CMD_WORKING_DIRECTORY@"
+ 
+-mkdir "@CMAKE_INSTALL_PREFIX@\@PYTHON_INSTALL_DIR@"
++mkdir "@SETUPTOOLS_INSTALL_PREFIX@\@PYTHON_INSTALL_DIR@"
+ 
+-set "PYTHONPATH=@CMAKE_INSTALL_PREFIX@\@PYTHON_INSTALL_DIR@;@CMAKE_BINARY_DIR@\@PYTHON_INSTALL_DIR@"
++set "PYTHONPATH=@SETUPTOOLS_INSTALL_PREFIX@\@PYTHON_INSTALL_DIR@;@CMAKE_BINARY_DIR@\@PYTHON_INSTALL_DIR@"
+ set "CATKIN_BINARY_DIR=@CMAKE_BINARY_DIR@"
++for /f "usebackq tokens=*" %%a in ('@SETUPTOOLS_INSTALL_PREFIX@') do (
++  set _SETUPTOOLS_INSTALL_PATH=%%~pna
++  set _SETUPTOOLS_INSTALL_ROOT=%%~da
++)
++
+ "@PYTHON_EXECUTABLE@" ^
+     "@CMAKE_CURRENT_SOURCE_DIR@\setup.py" ^
+     build --build-base "@CMAKE_CURRENT_BINARY_DIR@" ^
+     install %DESTDIR_ARG% @SETUPTOOLS_ARG_EXTRA@ ^
+-    --prefix="@SETUPTOOLS_INSTALL_PREFIX@" ^
+-    --install-scripts="@SETUPTOOLS_INSTALL_PREFIX@\@CATKIN_GLOBAL_BIN_DESTINATION@"
++    --prefix="%_SETUPTOOLS_INSTALL_PATH%" ^
++    --install-scripts="%_SETUPTOOLS_INSTALL_PATH%\@CATKIN_GLOBAL_BIN_DESTINATION@" ^
++    --root=%_SETUPTOOLS_INSTALL_ROOT%\
+
+diff --git a/cmake/platform/windows.cmake b/cmake/platform/windows.cmake
+index f962b308..2e9a8199 100644
+--- a/cmake/platform/windows.cmake
++++ b/cmake/platform/windows.cmake
+@@ -84,15 +84,9 @@ if(WIN32)
+   # enable Math Constants (https://docs.microsoft.com/en-us/cpp/c-runtime-library/math-constants)
+   add_definitions(-D_USE_MATH_DEFINES)
+ 
+-  # do not define STRICT macros (minwindef.h or boost\winapi\basic_types.hpp)
+-  add_definitions(-DNO_STRICT)
+-
+   # do not define min/max macros
+   add_definitions(-DNOMINMAX)
+ 
+-  # do not define STRICT macros (qtgui\qwindowdefs_win.h)
+-  add_definitions(-DQ_NOWINSTRICT)
+-
+   # keep minimum windows headers inclusion
+   add_definitions(-DWIN32_LEAN_AND_MEAN)
+ 

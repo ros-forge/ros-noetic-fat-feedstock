@@ -1,0 +1,12 @@
+channel_sources:
+  - ros-forge,conda-forge,defaults
+channel_targets:
+  - ros-forge main
+c_compiler:                    # [win]
+  - vs2017                     # [win]
+cxx_compiler:                  # [win]
+  - vs2017                     # [win]
+vc:                            # [win]
+  - 14                         # [win]
+python:                        # [win]
+  - 3.7                        # [win]
