@@ -89,6 +89,11 @@ jobs:
       condition: contains(variables['CONFIG'], 'vs2008')
 
     - script: |
+        rmdir C:\strawberry /s /q
+      continueOnError: true
+      displayName: remove strawberryperl
+
+    - script: |
         call activate base
         conda.exe build "recipe" -m .ci_support\%CONFIG%.yaml
       displayName: Build recipe
