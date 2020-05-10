@@ -13,7 +13,7 @@ jobs:
         CONFIG: win_
         CONDA_BLD_PATH: C:\\bld\\
         UPLOAD_PACKAGES: True
-        CONDA: C:\Miniconda3
+        CONDA: C:\Miniconda
   steps:
     # TODO: Fast finish on azure pipelines?
     - script: |
@@ -21,9 +21,10 @@ jobs:
         
 
     - script: |
-        dir c:\Miniconda3
+        dir c:\Miniconda
         curl https://repo.anaconda.com/miniconda/Miniconda3-4.6.14-Windows-x86_64.exe --output Miniconda3-latest-Windows-x86_64.exe
-        start /wait "" Miniconda3-latest-Windows-x86_64.exe /InstallationType=JustMe /AddToPath=0 /RegisterPython=0 /S /D=C:\Miniconda3
+        start /wait "" Miniconda3-latest-Windows-x86_64.exe /AddToPath=0 /RegisterPython=0 /S /D=C:\Miniconda
+        dir c:\Miniconda
         
     - script: |
         echo ##vso[task.prependpath]C:\Miniconda3\condabin
