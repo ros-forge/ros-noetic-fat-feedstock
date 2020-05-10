@@ -13,7 +13,7 @@ jobs:
         CONFIG: win_
         CONDA_BLD_PATH: C:\\bld\\
         UPLOAD_PACKAGES: True
-        CONDA: C:\\Miniconda3
+        CONDA: C:\Miniconda3
   steps:
     # TODO: Fast finish on azure pipelines?
     - script: |
