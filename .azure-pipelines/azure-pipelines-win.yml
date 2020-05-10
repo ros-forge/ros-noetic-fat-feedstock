@@ -33,6 +33,7 @@ jobs:
         echo ##vso[task.prependpath]C:\Miniconda3\Library\mingw-w64\bin
         echo ##vso[task.prependpath]C:\Miniconda3
       displayName: Add conda to PATH
+      condition: contains(variables['CONFIG'], 'vs2008')
       
     - script: |
         set PATH
