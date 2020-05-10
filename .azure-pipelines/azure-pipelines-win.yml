@@ -11,7 +11,7 @@ jobs:
     matrix:
       win_:
         CONFIG: win_
-        CONDA_BLD_PATH: D:\\bld\\
+        CONDA_BLD_PATH: C:\\bld\\
         UPLOAD_PACKAGES: True
         CONDA: C:\\Miniconda3
   steps:
