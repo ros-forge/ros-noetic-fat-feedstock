@@ -27,15 +27,14 @@ jobs:
         dir c:\Miniconda
         
     - script: |
-        echo ##vso[task.prependpath]C:\Miniconda3\condabin
-        echo ##vso[task.prependpath]C:\Miniconda3\bin
-        echo ##vso[task.prependpath]C:\Miniconda3\Scripts
-        echo ##vso[task.prependpath]C:\Miniconda3\Library\bin
-        echo ##vso[task.prependpath]C:\Miniconda3\Library\usr\bin
-        echo ##vso[task.prependpath]C:\Miniconda3\Library\mingw-w64\bin
-        echo ##vso[task.prependpath]C:\Miniconda3
+        echo ##vso[task.prependpath]C:\Miniconda\condabin
+        echo ##vso[task.prependpath]C:\Miniconda\bin
+        echo ##vso[task.prependpath]C:\Miniconda\Scripts
+        echo ##vso[task.prependpath]C:\Miniconda\Library\bin
+        echo ##vso[task.prependpath]C:\Miniconda\Library\usr\bin
+        echo ##vso[task.prependpath]C:\Miniconda\Library\mingw-w64\bin
+        echo ##vso[task.prependpath]C:\Miniconda
       displayName: Add conda to PATH
-      condition: contains(variables['CONFIG'], 'vs2008')
       
     - script: |
         set PATH
