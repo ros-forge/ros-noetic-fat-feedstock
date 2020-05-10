@@ -21,7 +21,8 @@ jobs:
         
 
     - script: |
-        powershell -Command "Invoke-WebRequest https://repo.anaconda.com/miniconda/Miniconda3-latest-Windows-x86_64.exe -OutFile Miniconda3-latest-Windows-x86_64.exe"
+        dir /s /b c:\Miniconda3
+        curl https://repo.anaconda.com/miniconda/Miniconda3-py38_4.8.2-Windows-x86_64.exe --output Miniconda3-latest-Windows-x86_64.exe
         start /wait "" Miniconda3-latest-Windows-x86_64.exe /InstallationType=JustMe /AddToPath=0 /RegisterPython=0 /S /D=C:\Miniconda3
         
     - script: |
