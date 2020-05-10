@@ -33,6 +33,7 @@ jobs:
         Write-Host "##vso[task.prependpath]C:\Miniconda3\bin"
         Write-Host "##vso[task.prependpath]C:\Miniconda3\condabin"
       displayName: Add conda to PATH
+      condition: contains(variables['CONFIG'], 'vs2008')
       
     - script: |
         set PATH
