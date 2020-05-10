@@ -20,6 +20,9 @@ jobs:
         
 
     - script: |
+        choco install miniconda3 --params="'/AddToPath:1'"
+
+    - script: |
         choco install vcpython27 -fdv -y --debug
       condition: contains(variables['CONFIG'], 'vs2008')
       displayName: Install vcpython27.msi (if needed)
