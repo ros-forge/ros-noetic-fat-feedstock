@@ -22,7 +22,9 @@ jobs:
     - script: |
         powershell -Command "Invoke-WebRequest https://repo.anaconda.com/miniconda/Miniconda3-latest-Windows-x86_64.exe -OutFile Miniconda3-latest-Windows-x86_64.exe"
         start /wait "" Miniconda3-latest-Windows-x86_64.exe /InstallationType=JustMe /AddToPath=1 /RegisterPython=1 /S /D=%UserProfile%\Miniconda3
-        echo ##vso[task.prependpath]%UserProfile%/Miniconda3/bin
+
+    - powershell: Write-Host "##vso[task.prependpath]$env:UserProfile\Miniconda3\Scripts"
+      displayName: Add conda to PATH
 
     - script: |
         choco install vcpython27 -fdv -y --debug
