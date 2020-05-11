@@ -11,7 +11,7 @@ jobs:
     matrix:
       win_:
         CONFIG: win_
-        # CONDA_BLD_PATH: C:\bld\
+        CONDA_BLD_PATH: C:\bld\
         UPLOAD_PACKAGES: False
         CONDA: C:\Miniconda
   steps:
@@ -26,7 +26,7 @@ jobs:
 
     - script: |
         dir c:\Miniconda
-        curl https://repo.anaconda.com/miniconda/Miniconda3-4.6.14-Windows-x86_64.exe --output Miniconda3-latest-Windows-x86_64.exe
+        powershell -Command "Invoke-WebRequest https://repo.anaconda.com/miniconda/Miniconda3-4.6.14-Windows-x86_64.exe -OutFile Miniconda3-latest-Windows-x86_64.exe"
         start /wait "" Miniconda3-latest-Windows-x86_64.exe /AddToPath=0 /RegisterPython=0 /S /D=C:\Miniconda
         dir c:\Miniconda
         
