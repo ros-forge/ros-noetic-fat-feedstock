@@ -11,8 +11,8 @@ jobs:
     matrix:
       win_:
         CONFIG: win_
-        CONDA_BLD_PATH: C:\\bld\\
-        UPLOAD_PACKAGES: True
+        CONDA_BLD_PATH: C:\bld\
+        UPLOAD_PACKAGES: False
         CONDA: C:\Miniconda
   steps:
     # TODO: Fast finish on azure pipelines?
