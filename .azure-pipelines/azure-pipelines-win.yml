@@ -105,6 +105,7 @@ jobs:
     # Special cased version setting some more things!
     - script: |
         call activate base
+        set CPU_COUNT=%NUMBER_OF_PROCESSORS%
         conda.exe build "recipe" -m .ci_support\%CONFIG%.yaml
       displayName: Build recipe (vs2008)
       env:
