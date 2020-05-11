@@ -662,6 +662,7 @@ outputs:
         - urdfdom
         - urdfdom_headers
         - yaml-cpp
+        - sip 4.19.20
       run:
         - apr
         - boost 1.72.*
