@@ -1,13 +1,19 @@
 bzip2:
 - '1'
 c_compiler:
-- vs2017
+- gcc
+c_compiler_version:
+- '7'
 channel_sources:
 - ros-forge,conda-forge,defaults
 channel_targets:
 - ros-forge main
 cxx_compiler:
-- vs2017
+- gxx
+cxx_compiler_version:
+- '7'
+docker_image:
+- condaforge/linux-anvil-comp7
 libcurl:
 - '7'
 libjpeg_turbo:
@@ -30,9 +36,7 @@ pin_run_as_build:
     max_pin: x.x
   qt:
     max_pin: x.x
-pyqt:
-- 5.12.3=*_1
 python:
-- '3.7'
+- 3.6.* *_cpython
 qt:
 - '5.12'
