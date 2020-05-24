@@ -388,6 +388,8 @@ source:
   - git_url: https://github.com/ros-gbp/ros_comm-release.git
     git_rev: release/noetic/roscpp/1.15.6-1
     folder: src/ros-noetic-roscpp
+    patches:
+      - patch/ros-noetic-roscpp.patch
   - git_url: https://github.com/ros-gbp/roscpp_core-release.git
     git_rev: release/noetic/roscpp_core/0.7.1-1
     folder: src/ros-noetic-roscpp-core
