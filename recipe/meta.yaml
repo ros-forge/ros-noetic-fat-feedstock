@@ -653,13 +653,9 @@ source:
   - git_url: https://github.com/ros-gbp/geometry2-release.git
     git_rev: release/noetic/tf2_py/0.7.1-1
     folder: src/ros-noetic-tf2-py
-    patches:
-      - patch/ros-noetic-tf2-py.patch
   - git_url: https://github.com/ros-gbp/geometry2-release.git
     git_rev: release/noetic/tf2_ros/0.7.1-1
     folder: src/ros-noetic-tf2-ros
-    patches:
-      - patch/ros-noetic-tf2-ros.patch
   - git_url: https://github.com/ros-gbp/geometry-release.git
     git_rev: release/noetic/tf_conversions/1.13.1-1
     folder: src/ros-noetic-tf-conversions
@@ -795,7 +791,6 @@ outputs:
         - urdfdom
         - urdfdom_headers
         - yaml-cpp
-        - sip 4.19.20
       run:
         - apr
         - assimp

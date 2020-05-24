@@ -8,7 +8,6 @@ set CXX=cl.exe
 
 set CATKIN_MAKE_ISOLATED=src\ros-noetic-catkin\bin\catkin_make_isolated
 set CMAKE_PREFIX_PATH=%CMAKE_PREFIX_PATH:\=/%
-set ROS_PARALLEL_JOBS=%NUMBER_OF_PROCESSORS%
 
 %PYTHON% %CATKIN_MAKE_ISOLATED% ^
     --install-space %LIBRARY_PREFIX% ^
