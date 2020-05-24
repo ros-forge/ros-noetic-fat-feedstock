@@ -657,9 +657,6 @@ source:
     folder: src/ros-noetic-tf-conversions
     patches:
       - patch/ros-noetic-tf-conversions.patch
-  - git_url: https://github.com/ros-gbp/image_transport_plugins-release.git
-    git_rev: release/noetic/theora_image_transport/1.14.0-1
-    folder: src/ros-noetic-theora-image-transport
   - git_url: https://github.com/ros-gbp/ros_comm-release.git
     git_rev: release/noetic/topic_tools/1.15.6-1
     folder: src/ros-noetic-topic-tools
