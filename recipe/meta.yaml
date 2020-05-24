@@ -610,12 +610,6 @@ source:
   - git_url: https://github.com/ros-gbp/bond_core-release.git
     git_rev: release/noetic/smclib/1.8.5-1
     folder: src/ros-noetic-smclib
-  - git_url: https://github.com/ros-gbp/stage-release.git
-    git_rev: release/noetic/stage/4.3.0-1
-    folder: src/ros-noetic-stage
-  - git_url: https://github.com/ros-gbp/stage_ros-release.git
-    git_rev: release/noetic/stage_ros/1.8.0-1
-    folder: src/ros-noetic-stage-ros
   - git_url: https://github.com/ros-gbp/std_msgs-release.git
     git_rev: release/noetic/std_msgs/0.5.13-1
     folder: src/ros-noetic-std-msgs
