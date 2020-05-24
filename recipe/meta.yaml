@@ -787,6 +787,7 @@ outputs:
         - urdfdom
         - urdfdom_headers
         - yaml-cpp
+        - harfbuzz
       run:
         - apr
         - assimp
@@ -843,6 +844,7 @@ outputs:
         - urdfdom
         - urdfdom_headers
         - yaml-cpp
+        - harfbuzz
     script: bld_catkin_merge.bat
 
 about:
