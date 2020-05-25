@@ -1,0 +1,12 @@
+diff --git a/src/rviz/CMakeLists.txt b/src/rviz/CMakeLists.txt
+index d5941099..d8229479 100644
+--- a/src/rviz/CMakeLists.txt
++++ b/src/rviz/CMakeLists.txt
+@@ -1,6 +1,7 @@
+ find_package(yaml-cpp REQUIRED)
+ 
+ include_directories(${YAML_CPP_INCLUDE_DIR})
++add_compile_definitions(YAML_CPP_DLL)
+ 
+ if(UNIX AND NOT APPLE)
+   find_package(X11 REQUIRED)

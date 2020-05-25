@@ -584,6 +584,8 @@ source:
   - git_url: https://github.com/ros-gbp/rviz-release.git
     git_rev: release/noetic/rviz/1.14.0-2
     folder: src/ros-noetic-rviz
+    patches:
+      - patch/ros-noetic-rviz.patch
   - git_url: https://github.com/ros-gbp/visualization_tutorials-release.git
     git_rev: release/noetic/rviz_plugin_tutorials/0.11.0-1
     folder: src/ros-noetic-rviz-plugin-tutorials
