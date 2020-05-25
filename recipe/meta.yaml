@@ -213,6 +213,8 @@ source:
   - git_url: https://github.com/ros-gbp/interactive_markers-release.git
     git_rev: release/noetic/interactive_markers/1.12.0-1
     folder: src/ros-noetic-interactive-markers
+    patches:
+      - patch/ros-noetic-interactive-markers.patch
   - git_url: https://github.com/ros-gbp/ros_control-release.git
     git_rev: release/noetic/joint_limits_interface/0.19.1-1
     folder: src/ros-noetic-joint-limits-interface
