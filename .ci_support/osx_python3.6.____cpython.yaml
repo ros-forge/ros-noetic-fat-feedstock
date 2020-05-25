@@ -14,6 +14,8 @@ cxx_compiler:
 - clangxx
 cxx_compiler_version:
 - '9'
+harfbuzz:
+- '2'
 libcurl:
 - '7'
 libjpeg_turbo:
@@ -28,6 +30,8 @@ openssl:
 - 1.1.1
 pin_run_as_build:
   bzip2:
+    max_pin: x
+  harfbuzz:
     max_pin: x
   libcurl:
     max_pin: x

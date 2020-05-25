@@ -1,3 +1,5 @@
+assimp:
+- '4'
 bzip2:
 - '1'
 c_compiler:
@@ -8,6 +10,8 @@ channel_targets:
 - ros-forge main
 cxx_compiler:
 - vs2017
+harfbuzz:
+- '2'
 libcurl:
 - '7'
 libjpeg_turbo:
@@ -18,6 +22,8 @@ openssl:
 - 1.1.1
 pin_run_as_build:
   bzip2:
+    max_pin: x
+  harfbuzz:
     max_pin: x
   libcurl:
     max_pin: x
