@@ -10,3 +10,35 @@ index d5941099..d8229479 100644
  
  if(UNIX AND NOT APPLE)
    find_package(X11 REQUIRED)
+
+diff --git a/src/rviz/default_plugin/marker_utils.cpp b/src/rviz/default_plugin/marker_utils.cpp
+index 541d2ceb..ff234436 100644
+--- a/src/rviz/default_plugin/marker_utils.cpp
++++ b/src/rviz/default_plugin/marker_utils.cpp
+@@ -45,6 +45,10 @@
+ #include <rviz/validate_quaternions.h>
+ #include <rviz/validate_floats.h>
+ 
++#if defined(_WIN32) && defined(DELETE)
++  #undef DELETE
++#endif
++
+ namespace rviz
+ {
+ MarkerBase*
+
+diff --git a/src/rviz/default_plugin/marker_display.cpp b/src/rviz/default_plugin/marker_display.cpp
+index 79edefd7..dbce8f57 100644
+--- a/src/rviz/default_plugin/marker_display.cpp
++++ b/src/rviz/default_plugin/marker_display.cpp
+@@ -43,6 +43,10 @@
+ 
+ #include <rviz/default_plugin/marker_display.h>
+ 
++#if defined(_WIN32) && defined(DELETE)
++  #undef DELETE
++#endif
++
+ namespace rviz
+ {
+ ////////////////////////////////////////////////////////////////////////////////////////////////////////////////
