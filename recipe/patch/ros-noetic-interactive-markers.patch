@@ -6,8 +6,8 @@ index bd1a1b7..69dd5b8 100644
  
  #include "detail/state_machine.h"
  
-+#if defined(_WIN32) && defined(DELETE)
-+  #undef DELETE
++#if defined(_WIN32) && defined(ERROR)
++  #undef ERROR
 +#endif
 +
  namespace interactive_markers
