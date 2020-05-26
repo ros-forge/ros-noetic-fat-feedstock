@@ -42,3 +42,20 @@ index 79edefd7..dbce8f57 100644
  namespace rviz
  {
  ////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+diff --git a/src/rviz/ogre_helpers/render_system.cpp b/src/rviz/ogre_helpers/render_system.cpp
+index 14d83396..4da6bde9 100644
+--- a/src/rviz/ogre_helpers/render_system.cpp
++++ b/src/rviz/ogre_helpers/render_system.cpp
+@@ -155,7 +155,11 @@ void RenderSystem::setupDummyWindowId()
+ 
+ void RenderSystem::loadOgrePlugins()
+ {
++#ifdef _WIN32
++  std::string plugin_prefix = "";
++#else
+   std::string plugin_prefix = get_ogre_plugin_path() + "/";
++#endif
+ #ifdef Q_OS_MAC
+   plugin_prefix += "lib";
+ #endif
