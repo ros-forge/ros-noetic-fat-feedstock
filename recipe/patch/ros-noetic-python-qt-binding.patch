@@ -39,7 +39,7 @@ index e41f5dc..432d1fc 100644
      set(LDFLAGS_OTHER ${${PROJECT_NAME}_LDFLAGS_OTHER})
  
 +    set(EXTRA_DEFINES "")
-+    if(DEFINED BUILD_SHARED_LIBS)
++    if(BUILD_SHARED_LIBS)
 +      set(EXTRA_DEFINES "ROS_BUILD_SHARED_LIBS")
 +    endif()
 +
