@@ -19,7 +19,7 @@ index ca8d77cd..ef498e25 100644
    add_definitions(-DWIN32_LEAN_AND_MEAN)
 +  
 +  # enable dynamic linking for boost
-+  add_definitions(-DBOOST_ALL_DYN_LINK -DBOOST_ALL_NO_LIB)
++  add_definitions(-DBOOST_ALL_NO_LIB)
  
    # explicitly enable C++ to compile wrapper
    enable_language(CXX)
